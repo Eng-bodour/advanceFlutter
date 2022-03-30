@@ -6,37 +6,52 @@ import 'package:flutter/material.dart';
 
 ThemeData getApplicationTheme() {
   return ThemeData(
-      //main Color Application
+    //main Color Application
 
-      primaryColor: ColorManager.primary,
-      primaryColorLight: ColorManager.lightPrimary,
-      primaryColorDark: ColorManager.darkPrimary,
-      disabledColor: ColorManager.grey1,
-      splashColor: ColorManager.lightGray,
+    primaryColor: ColorManager.primary,
+    primaryColorLight: ColorManager.lightPrimary,
+    primaryColorDark: ColorManager.darkPrimary,
+    disabledColor: ColorManager.grey1,
+    splashColor: ColorManager.lightGray,
 
-      //Cardview theme
+    //Cardview theme
 
-      cardTheme: CardTheme(
-        color: ColorManager.white,
-        shadowColor: ColorManager.gray,
+    cardTheme: CardTheme(
+      color: ColorManager.white,
+      shadowColor: ColorManager.gray,
+      elevation: AppSize.s4,
+    ),
+
+    //appbar theme
+    appBarTheme: AppBarTheme(
+        color: ColorManager.primary,
+        centerTitle: true,
         elevation: AppSize.s4,
-      ),
+        shadowColor: ColorManager.lightPrimary,
+        titleTextStyle: getReqularStyle(
+          fontSize: FontSize.s16,
+          color: ColorManager.white,
+        )),
 
-      //appbar theme
-      appBarTheme: AppBarTheme(
-          color: ColorManager.primary,
-          centerTitle: true,
-          elevation: AppSize.s4,
-          shadowColor: ColorManager.lightPrimary,
-          titleTextStyle: getReqularStyle(
-            fontSize: FontSize.s16,
-            color: ColorManager.white,
-          ))
+    //button theme
+    buttonTheme: ButtonThemeData(
+        shape: const StadiumBorder(),
+        disabledColor: ColorManager.grey1,
+        buttonColor: ColorManager.primary,
+        splashColor: ColorManager.lightPrimary),
+    //elevated button
 
-      //button theme
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+          textStyle: getReqularStyle(
+              color: ColorManager.white, fontSize: FontSize.s17),
+          primary: ColorManager.primary,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(AppSize.s12),
+          )),
+    ),
+    //text theme
 
-      //text theme
-
-      //input  decoration theme (text form field)
-      );
+    //input  decoration theme (text form field)
+  );
 }
