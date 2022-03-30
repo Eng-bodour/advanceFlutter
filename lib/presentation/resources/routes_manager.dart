@@ -2,6 +2,7 @@ import 'package:advance_flutter/presentation/forgot_password/forgot_password_vie
 import 'package:advance_flutter/presentation/login/login_view.dart';
 import 'package:advance_flutter/presentation/main/main_view.dart';
 import 'package:advance_flutter/presentation/register/register_view.dart';
+import 'package:advance_flutter/presentation/resources/stringes_manager.dart';
 import 'package:advance_flutter/presentation/splash/splash_view.dart';
 import 'package:advance_flutter/presentation/store_details/store_details_view.dart';
 
@@ -44,11 +45,13 @@ class RouteGenerator {
         builder: (_) => Scaffold(
               appBar: AppBar(
                 title: const Text(
-                    'No Route Found'), // to do move this Strings manager
+                  AppStringes.noRouteFound,
+                ), // to do move this Strings manager
               ),
               body: const Center(
-                child:
-                    Text('No Route Found'), // to do move this Strings manager
+                child: Text(
+                  AppStringes.noRouteFound,
+                ), // to do move this Strings manager
               ),
             ));
   }
