@@ -67,6 +67,7 @@ ThemeData getApplicationTheme() {
       contentPadding: const EdgeInsets.all(
         AppPadding.p8,
       ),
+
       //hint style
       hintStyle:
           getReqularStyle(color: ColorManager.gray, fontSize: FontSize.s14),
